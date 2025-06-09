@@ -8,12 +8,13 @@ import ErrorScreen from './Components/ErrorScreen'
 const App = () => {
   return (
     <Routes>
-        <Route path='/app' element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path=':id' element={<Conversation />} />
-        </Route>
-        <Route path='/error' element={<ErrorScreen />} />
-        <Route path='*' element={<Navigate to="/error"/>}/>
+          <Route path="/" element={<Navigate to="/app" replace />} />
+          <Route path='/app' element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path=':id' element={<Conversation />} />
+          </Route>
+          <Route path='/error' element={<ErrorScreen />} />
+          <Route path='*' element={<Navigate to="/error"/>}/>
     </Routes>
   )
 }
