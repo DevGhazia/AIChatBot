@@ -205,13 +205,35 @@
     border-radius: 100%;
     cursor: pointer;
     border: none;
-    margin-left: 30px;
+    background: white;
+    margin-left: 15px;
 }
             
 .user_icon_img{
     height: 100%;    
     width: 100%;
     border-radius: 50%; 
+}
+
+.github_icon{
+    position: relative;
+}
+
+.github_icon:hover .github_tooltip{
+    visibility: visible;
+}
+
+.github_tooltip{
+    background-color: white;
+    position: absolute;
+    bottom: -30px;
+    padding: 5px 10px;
+    visibility: hidden;
+    color: var(--dark-background);
+    font-size: 12px;
+    border-radius: 5px;
+    width: min-content;
+    white-space: nowrap;
 }
 
 .hero{

@@ -4,7 +4,8 @@ import Icon from './Icon'
 import { IoMdSend} from 'react-icons/io'
 import { MdOutlineMenu, MdOutlineAdd } from 'react-icons/md'
 import { PromptContext } from '../context/Context'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
+import { FaGithub } from 'react-icons/fa'
 
 const Hero = () => {
   const {
@@ -49,6 +50,14 @@ const Hero = () => {
               isDisabled={startingScreen}>
                 <MdOutlineAdd className='icon' />
             </Icon>
+            <Link to={'https://github.com/DevGhazia/AIChatBot'} target='_black'>
+              <div className='github_icon'>
+                <FaGithub className='user_icon' />
+                <div className='github_tooltip'>
+                  <span>View Code</span>
+                </div>
+              </div>
+            </Link>
             <button className='user_icon'>
               <img src={iconImage} alt="" className='user_icon_img' />
               {/* <FiUser className='user_icon_img'/> */}
